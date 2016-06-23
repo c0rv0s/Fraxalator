@@ -13,6 +13,15 @@
 		430D00601D09F5F600B88997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430D005E1D09F5F600B88997 /* Main.storyboard */; };
 		430D00621D09F5F600B88997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430D00611D09F5F600B88997 /* Assets.xcassets */; };
 		430D00651D09F5F600B88997 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430D00631D09F5F600B88997 /* LaunchScreen.storyboard */; };
+		430D00701D0A079D00B88997 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430D006F1D0A079D00B88997 /* CloudKit.framework */; };
+		430D007F1D0A379200B88997 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430D007E1D0A379200B88997 /* CoreAudioKit.framework */; };
+		430D00811D0A379800B88997 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430D00801D0A379800B88997 /* CoreAudio.framework */; };
+		430D00831D0A379D00B88997 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430D00821D0A379D00B88997 /* CoreMIDI.framework */; };
+		430D00851D0A699700B88997 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D00841D0A699700B88997 /* Engine.swift */; };
+		4349121C1D15EAB70095E276 /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349121B1D15EAB70095E276 /* RoundedCornersView.swift */; };
+		4349121E1D15ED2B0095E276 /* addLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349121D1D15ED2B0095E276 /* addLetters.swift */; };
+		4369BBA41D0CB67F00B8CA66 /* score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4369BBA31D0CB67F00B8CA66 /* score.swift */; };
+		43B7F5AD1D18B71D00EC6E6F /* gs_instruments.dls in Resources */ = {isa = PBXBuildFile; fileRef = 43B7F5AA1D18B71D00EC6E6F /* gs_instruments.dls */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,16 @@
 		430D00611D09F5F600B88997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430D00641D09F5F600B88997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430D00661D09F5F600B88997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430D006E1D0A079900B88997 /* Fraxalator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Fraxalator.entitlements; sourceTree = "<group>"; };
+		430D006F1D0A079D00B88997 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		430D007E1D0A379200B88997 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		430D00801D0A379800B88997 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		430D00821D0A379D00B88997 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		430D00841D0A699700B88997 /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		4349121B1D15EAB70095E276 /* RoundedCornersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
+		4349121D1D15ED2B0095E276 /* addLetters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addLetters.swift; sourceTree = "<group>"; };
+		4369BBA31D0CB67F00B8CA66 /* score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = score.swift; sourceTree = "<group>"; };
+		43B7F5AA1D18B71D00EC6E6F /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; path = gs_instruments.dls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430D00831D0A379D00B88997 /* CoreMIDI.framework in Frameworks */,
+				430D00811D0A379800B88997 /* CoreAudio.framework in Frameworks */,
+				430D007F1D0A379200B88997 /* CoreAudioKit.framework in Frameworks */,
+				430D00701D0A079D00B88997 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +63,10 @@
 		430D004C1D09F5F600B88997 = {
 			isa = PBXGroup;
 			children = (
+				430D00821D0A379D00B88997 /* CoreMIDI.framework */,
+				430D00801D0A379800B88997 /* CoreAudio.framework */,
+				430D007E1D0A379200B88997 /* CoreAudioKit.framework */,
+				430D006F1D0A079D00B88997 /* CloudKit.framework */,
 				430D00571D09F5F600B88997 /* Fraxalator */,
 				430D00561D09F5F600B88997 /* Products */,
 			);
@@ -56,15 +83,29 @@
 		430D00571D09F5F600B88997 /* Fraxalator */ = {
 			isa = PBXGroup;
 			children = (
+				4349121B1D15EAB70095E276 /* RoundedCornersView.swift */,
+				430D007B1D0A216900B88997 /* sound files */,
+				430D006E1D0A079900B88997 /* Fraxalator.entitlements */,
 				430D00581D09F5F600B88997 /* AppDelegate.swift */,
 				430D005A1D09F5F600B88997 /* FirstViewController.swift */,
+				430D00841D0A699700B88997 /* Engine.swift */,
 				430D005C1D09F5F600B88997 /* SecondViewController.swift */,
 				430D005E1D09F5F600B88997 /* Main.storyboard */,
 				430D00611D09F5F600B88997 /* Assets.xcassets */,
 				430D00631D09F5F600B88997 /* LaunchScreen.storyboard */,
 				430D00661D09F5F600B88997 /* Info.plist */,
+				4369BBA31D0CB67F00B8CA66 /* score.swift */,
+				4349121D1D15ED2B0095E276 /* addLetters.swift */,
 			);
 			path = Fraxalator;
+			sourceTree = "<group>";
+		};
+		430D007B1D0A216900B88997 /* sound files */ = {
+			isa = PBXGroup;
+			children = (
+				43B7F5AA1D18B71D00EC6E6F /* gs_instruments.dls */,
+			);
+			name = "sound files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +140,13 @@
 				TargetAttributes = {
 					430D00541D09F5F600B88997 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = JBMX4N8785;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B7F5AD1D18B71D00EC6E6F /* gs_instruments.dls in Resources */,
 				430D00651D09F5F600B88997 /* LaunchScreen.storyboard in Resources */,
 				430D00621D09F5F600B88997 /* Assets.xcassets in Resources */,
 				430D00601D09F5F600B88997 /* Main.storyboard in Resources */,
@@ -139,8 +188,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				430D005D1D09F5F600B88997 /* SecondViewController.swift in Sources */,
+				430D00851D0A699700B88997 /* Engine.swift in Sources */,
 				430D00591D09F5F600B88997 /* AppDelegate.swift in Sources */,
 				430D005B1D09F5F600B88997 /* FirstViewController.swift in Sources */,
+				4369BBA41D0CB67F00B8CA66 /* score.swift in Sources */,
+				4349121C1D15EAB70095E276 /* RoundedCornersView.swift in Sources */,
+				4349121E1D15ED2B0095E276 /* addLetters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,10 +308,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Fraxalator/Fraxalator.entitlements;
 				INFOPLIST_FILE = Fraxalator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = onenathan.Fraxalator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -266,10 +321,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Fraxalator/Fraxalator.entitlements;
 				INFOPLIST_FILE = Fraxalator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = onenathan.Fraxalator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -292,6 +349,7 @@
 				430D006B1D09F5F600B88997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
