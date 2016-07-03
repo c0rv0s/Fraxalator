@@ -457,7 +457,7 @@
             </objects>
             <point key="canvasLocation" x="2271.1999999999998" y="-368.36581709145429"/>
         </scene>
-        <!--Second-->
+        <!--Tutorial-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Fraxalator" customModuleProvider="target" sceneMemberID="viewController">
@@ -469,65 +469,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e2p-xv-dWL">
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">How to use: Enter a sequence of letters A-G in the first seven blanks marked rules and then in the last one put your starting sequence. The default is set to 5 iterations.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="20" width="360" height="82"/>
-                                </variation>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How does this work?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-AN-pjP">
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="110" width="360" height="33"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="110" width="347" height="33"/>
                                 </variation>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7CD2D9CF-B708-45C5-B543-D641AAB0EEFD" translatesAutoresizingMaskIntoConstraints="NO" id="aP8-hq-Vsa">
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-06-11 at 3.12.38 PM" translatesAutoresizingMaskIntoConstraints="NO" id="aP8-hq-Vsa">
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="80" y="198" width="240" height="157"/>
                                 </variation>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kU4-nw-Mmo">
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Start out with the axiom, "A B". After one iteration, the string would become "A B C C A D". Now, we would use the same production rules with this new string. It becomes "A B C C A D D C D C A B C B D B". The results of L-Systems are characterized by repeated themes and self-similarity. L-Systems tend to grow fast, so a small number of iterations is usually sufficient.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="80" y="380" width="240" height="220"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e2p-xv-dWL">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">How to use: Enter a sequence of letters A-G in the first seven blanks marked rules and then in the last one put your starting sequence. The default is set to 5 iterations.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="7" y="20" width="360" height="82"/>
                                 </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kU4-nw-Mmo" secondAttribute="trailing" constant="39" id="0f2-eG-RZE"/>
+                            <constraint firstItem="Vcu-AN-pjP" firstAttribute="top" secondItem="e2p-xv-dWL" secondAttribute="bottom" constant="8" id="1xD-6V-7FN"/>
+                            <constraint firstItem="aP8-hq-Vsa" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="64" id="AaQ-kx-mgo"/>
+                            <constraint firstItem="e2p-xv-dWL" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="AwS-Dt-eza"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aP8-hq-Vsa" secondAttribute="trailing" constant="39" id="Bg1-e4-cfd"/>
+                            <constraint firstAttribute="trailing" secondItem="e2p-xv-dWL" secondAttribute="trailing" constant="8" id="Idb-13-CBf"/>
+                            <constraint firstItem="kU4-nw-Mmo" firstAttribute="top" secondItem="aP8-hq-Vsa" secondAttribute="bottom" constant="25" id="WtI-s6-T4g"/>
+                            <constraint firstItem="aP8-hq-Vsa" firstAttribute="top" secondItem="Vcu-AN-pjP" secondAttribute="bottom" constant="55" id="deb-oF-NGN"/>
+                            <constraint firstAttribute="trailing" secondItem="Vcu-AN-pjP" secondAttribute="trailing" constant="8" id="fxG-M1-0GE"/>
+                            <constraint firstItem="e2p-xv-dWL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="7" id="hFg-XV-lI7"/>
+                            <constraint firstItem="Vcu-AN-pjP" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="20" id="uqU-dP-vck"/>
+                            <constraint firstItem="kU4-nw-Mmo" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="64" id="xOy-Gb-Eq3"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="e2p-xv-dWL"/>
                                 <exclude reference="Vcu-AN-pjP"/>
                                 <exclude reference="aP8-hq-Vsa"/>
                                 <exclude reference="kU4-nw-Mmo"/>
+                                <exclude reference="e2p-xv-dWL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="e2p-xv-dWL"/>
                                 <include reference="Vcu-AN-pjP"/>
                                 <include reference="aP8-hq-Vsa"/>
                                 <include reference="kU4-nw-Mmo"/>
+                                <include reference="e2p-xv-dWL"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Tutorial" image="info" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="596"/>
+            <point key="canvasLocation" x="725.60000000000002" y="595.95202398800609"/>
         </scene>
         <!--Add Letters-->
         <scene sceneID="rfi-Em-bLB">
@@ -754,11 +764,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--Compose-->
         <scene sceneID="QPb-NW-fTB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hqF-Sg-vka" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="j4e-Xf-L55"/>
+                    <tabBarItem key="tabBarItem" title="Compose" image="music-player" id="j4e-Xf-L55"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Xw-I7-93R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -775,22 +785,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7CD2D9CF-B708-45C5-B543-D641AAB0EEFD" width="257" height="175">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
-GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
-V05TQ29sb3KAAoAMEiTAAACAA4AKWnsyNTcsIDE3NX3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
-GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18QgWZpbGU6Ly8vQXBwbGlj
-YXRpb25zL1hjb2RlLWJldGEuYXBwL0NvbnRlbnRzL1BsdWdJbnMvSURFSW50ZXJmYWNlQnVpbGRlcktp
-dC5pZGVwbHVnaW4vQ29udGVudHMvUmVzb3VyY2VzL0lCTWlzc2luZ0ltYWdlR2x5cGgudGlmZtInKCkq
-WiRjbGFzc25hbWVYJGNsYXNzZXNVTlNVUkyiKStYTlNPYmplY3TSJygtLldOU0FycmF5oi0r0zAxCjIz
-NFdOU1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOAC9InKDY3V05TQ29sb3KiNivSJyg5OldOU0ltYWdl
-ojkrXxAPTlNLZXllZEFyY2hpdmVy0T0+VHJvb3SAAQAIABEAGgAjAC0AMgA3AEUASwBWAF0AZABxAHgA
-gACCAIQAiQCLAI0AmACdAKgAqgCsAK4AswC2ALgAugC8AL4AxQDNANkA2wDdAN8BYwFoAXMBfAGCAYUB
-jgGTAZsBngGlAa0BugG/AcEBwwHIAdAB0wHYAeAB4wH1AfgB/QAAAAAAAAIBAAAAAAAAAD8AAAAAAAAA
-AAAAAAAAAAH/A
-</mutableData>
-        </image>
-        <image name="second" width="30" height="30"/>
+        <image name="Screen Shot 2016-06-11 at 3.12.38 PM" width="257" height="175"/>
+        <image name="info" width="24" height="24"/>
+        <image name="music-player" width="24" height="24"/>
     </resources>
 </document>
