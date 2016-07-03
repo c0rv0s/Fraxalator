@@ -11,10 +11,13 @@ import AVFoundation
 
 class FirstViewController: UITableViewController {
     
+    //store instance
     var fractalEngine : Engine!
     
+    //store working letter
     var currentLetter : String!
     
+    //individual references
     @IBOutlet weak var scoreButton: UIBarButtonItem!
     @IBOutlet weak var A: UITextField!
     @IBOutlet weak var B: UITextField!
@@ -26,6 +29,7 @@ class FirstViewController: UITableViewController {
     
     @IBOutlet weak var playbutton: UIButton!
     
+    //midid setup
     var engine = AVAudioEngine()
     var sampler = AVAudioUnitSampler()
     
