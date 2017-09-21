@@ -17,6 +17,8 @@ class FirstViewController: UITableViewController {
     //store working letter
     var currentLetter : String!
     
+    @IBOutlet weak var instrumentField: UITextField!
+    
     //individual references
     @IBOutlet weak var scoreButton: UIBarButtonItem!
     @IBOutlet weak var A: UITextField!
@@ -29,7 +31,7 @@ class FirstViewController: UITableViewController {
     
     @IBOutlet weak var playbutton: UIButton!
     
-    //midid setup
+    //midi setup
     var engine = AVAudioEngine()
     var sampler = AVAudioUnitSampler()
     
@@ -41,6 +43,9 @@ class FirstViewController: UITableViewController {
     var soundbank:URL?
     let soundFontMuseCoreName = "GeneralUser GS MuseScore v1.442"
 
+    //pick instument
+    var pickerData: [String] = ["1"]
+    var selectedMelody = 81
     
     var musicSequence:MusicSequence!
     
@@ -51,9 +56,21 @@ class FirstViewController: UITableViewController {
     let gmHarpsichord = UInt8(6)
     
     @IBOutlet weak var start: UITextField!
+    
+    var selectedSet = 8
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        var num = 2
+        while num < 129 {
+            let entry  = String(num)
+            print(entry)
+            pickerData.append(entry)
+            num += 1
+        }
+        print(pickerData)
         
+        super.viewDidLoad()
+
         A.isUserInteractionEnabled = false
         B.isUserInteractionEnabled = false
         C.isUserInteractionEnabled = false
@@ -61,41 +78,51 @@ class FirstViewController: UITableViewController {
         E.isUserInteractionEnabled = false
         F.isUserInteractionEnabled = false
         G.isUserInteractionEnabled = false
+        instrumentField.isUserInteractionEnabled = false
         start.isUserInteractionEnabled = false
         
         playbutton.isHidden = true
         scoreButton.isEnabled = false
         initAudio()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
     
     @IBAction func cancelFirstViewController(_ segue:UIStoryboardSegue) {
-        if let addLetters = segue.sourceViewController as? addLetters {
-            if addLetters.currentLetter == "A" {
-                A.text = addLetters.text
+        
+        if let addLetters = segue.source as? addLetters {
+            if addLetters.text == "" {}
+            else {
+                if addLetters.currentLetter == "A" {
+                    A.text = addLetters.text
+                }
+                if addLetters.currentLetter == "B" {
+                    B.text = addLetters.text
+                }
+                if addLetters.currentLetter == "C" {
+                    C.text = addLetters.text
+                }
+                if addLetters.currentLetter == "D" {
+                    D.text = addLetters.text
+                }
+                if addLetters.currentLetter == "E" {
+                    E.text = addLetters.text
+                }
+                if addLetters.currentLetter == "F" {
+                    F.text = addLetters.text
+                }
+                if addLetters.currentLetter == "G" {
+                    G.text = addLetters.text
+                }
+                if addLetters.currentLetter == "start" {
+                    start.text = addLetters.text
+                }
             }
-            if addLetters.currentLetter == "B" {
-                B.text = addLetters.text
-            }
-            if addLetters.currentLetter == "C" {
-                C.text = addLetters.text
-            }
-            if addLetters.currentLetter == "D" {
-                D.text = addLetters.text
-            }
-            if addLetters.currentLetter == "E" {
-                E.text = addLetters.text
-            }
-            if addLetters.currentLetter == "F" {
-                F.text = addLetters.text
-            }
-            if addLetters.currentLetter == "G" {
-                G.text = addLetters.text
-            }
-            if addLetters.currentLetter == "start" {
-                start.text = addLetters.text
-            }
+        }
+        
+        if let pickInstrument = segue.source as? pickInstrument {
+            self.selectedSet = pickInstrument.selectedSet
+
         }
     }
 
@@ -121,10 +148,12 @@ class FirstViewController: UITableViewController {
             playbutton.isHidden = false
             scoreButton.isEnabled = true
         }
-
-
     }
     
+    
+    @IBAction func styleButton(_ sender: AnyObject) {
+        
+    }
     
     @IBAction func playButton(_ sender: AnyObject) {
 
@@ -174,7 +203,6 @@ class FirstViewController: UITableViewController {
 
                 }
             }
-
     }
     
     func play(_ note: UInt8) {
@@ -187,11 +215,10 @@ class FirstViewController: UITableViewController {
     }
     
     //global delay helper function
-    func delay(_ delay:Double, closure:()->()) {
-        DispatchQueue.main.after(when: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) {
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) {
             closure()
         }
-
     }
     
     func initAudio(){
@@ -201,30 +228,22 @@ class FirstViewController: UITableViewController {
          engine.attach(self.sampler)
          engine.connect(self.sampler, to: engine.outputNode, format: nil)
          
-         guard let soundbank = Bundle.main().urlForResource("gs_instruments", withExtension: "dls") else {
+        guard let soundbank = Bundle.main.url(forResource: "gs_instruments", withExtension: "dls") else {
          
-         print("Could not initalize soundbank.")
-         return
+            print("Could not initalize soundbank.")
+            return
          }
          
          let melodicBank:UInt8 = UInt8(kAUSampler_DefaultMelodicBankMSB)
-         let gmHarpsichord:UInt8 = 6
+         let gmHarpsichord:UInt8 = UInt8(selectedMelody)
          do {
-         try engine.start()
-         try self.sampler.loadSoundBankInstrument(at: soundbank, program: gmHarpsichord, bankMSB: melodicBank, bankLSB: 0)
+            try engine.start()
+            try self.sampler.loadSoundBankInstrument(at: soundbank, program: gmHarpsichord, bankMSB: melodicBank, bankLSB: 0)
          
          }catch {
-         print("An error occurred \(error)")
-         return
+            print("An error occurred \(error)")
+            return
          }
-        
-        /*
-        self.musicSequence = createMusicSequence()
-        createAVMIDIPlayer(self.musicSequence)
-        createAVMIDIPlayerFromMIDIFIle()
-        self.musicPlayer = createMusicPlayer(musicSequence)
-        */
-        
     }
     
     
@@ -233,41 +252,47 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath as NSIndexPath).row == 0 {
-            self.currentLetter = "A"
+        if (indexPath as NSIndexPath).row == 8 {
+            self.performSegue(withIdentifier: "instrumentSegue", sender: self)
         }
-        if (indexPath as NSIndexPath).row == 1 {
-            self.currentLetter = "B"
+        else {
+            if (indexPath as NSIndexPath).row == 0 {
+                self.currentLetter = "A"
+            }
+            if (indexPath as NSIndexPath).row == 1 {
+                self.currentLetter = "B"
+            }
+            if (indexPath as NSIndexPath).row == 2 {
+                self.currentLetter = "C"
+            }
+            if (indexPath as NSIndexPath).row == 3 {
+                self.currentLetter = "D"
+            }
+            if (indexPath as NSIndexPath).row == 4 {
+                self.currentLetter = "E"
+            }
+            if (indexPath as NSIndexPath).row == 5 {
+                self.currentLetter = "F"
+            }
+            if (indexPath as NSIndexPath).row == 6 {
+                self.currentLetter = "G"
+            }
+            if (indexPath as NSIndexPath).row == 7 {
+                self.currentLetter = "start"
+            }
+            
+            self.performSegue(withIdentifier: "addLettersSegue", sender: self)
         }
-        if (indexPath as NSIndexPath).row == 2 {
-            self.currentLetter = "C"
-        }
-        if (indexPath as NSIndexPath).row == 3 {
-            self.currentLetter = "D"
-        }
-        if (indexPath as NSIndexPath).row == 4 {
-            self.currentLetter = "E"
-        }
-        if (indexPath as NSIndexPath).row == 5 {
-            self.currentLetter = "F"
-        }
-        if (indexPath as NSIndexPath).row == 6 {
-            self.currentLetter = "G"
-        }
-        if (indexPath as NSIndexPath).row == 7 {
-            self.currentLetter = "start"
-        }
-        
-        self.performSegue(withIdentifier: "addLettersSegue", sender: self)
+
     }
     
-    override func prepare(for segue: UIStoryboardSegue?, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue?, sender: Any?) {
         if (segue!.identifier == "scoreSegue") {
-            let viewController:score = segue!.destinationViewController as! score
+            let viewController:score = segue!.destination as! score
             viewController.fractalEngine = self.fractalEngine!
         }
         if (segue!.identifier == "addLettersSegue") {
-            let viewController:addLetters = segue!.destinationViewController as! addLetters
+            let viewController:addLetters = segue!.destination as! addLetters
             viewController.currentLetter = self.currentLetter
         }
     }
@@ -275,7 +300,7 @@ class FirstViewController: UITableViewController {
     //midi stuff
     func createAVMIDIPlayer(_ musicSequence:MusicSequence) {
         
-        guard let bankURL = Bundle.main().urlForResource("GeneralUser GS MuseScore v1.442", withExtension: "sf2") else {
+        guard let bankURL = Bundle.main.url(forResource: "GeneralUser GS MuseScore v1.442", withExtension: "sf2") else {
             fatalError("\"GeneralUser GS MuseScore v1.442.sf2\" file not found.")
         }
         
@@ -309,10 +334,10 @@ class FirstViewController: UITableViewController {
     
     func createAVMIDIPlayerFromMIDIFIle() {
         
-        guard let midiFileURL = Bundle.main().urlForResource("sibeliusGMajor", withExtension: "mid") else {
+        guard let midiFileURL = Bundle.main.url(forResource: "sibeliusGMajor", withExtension: "mid") else {
             fatalError("\"sibeliusGMajor.mid\" file not found.")
         }
-        guard let bankURL = Bundle.main().urlForResource("GeneralUser GS MuseScore v1.442", withExtension: "sf2") else {
+        guard let bankURL = Bundle.main.url(forResource: "GeneralUser GS MuseScore v1.442", withExtension: "sf2") else {
             fatalError("\"GeneralUser GS MuseScore v1.442.sf2\" file not found.")
         }
         

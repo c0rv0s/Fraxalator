@@ -49,7 +49,7 @@ class Engine {
                 }
             }
             comp = newComp
-            print("\(counter) :  \(comp)")
+            print("\(counter) :  \(String(describing: comp))")
             
             counter += 1
         }
