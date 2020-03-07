@@ -61,7 +61,7 @@ class addLetters: UIViewController {
     }
     
     @IBAction func dtlcya(_ sender: AnyObject) {
-        if text.characters.count > 0 {
+        if text.count > 0 {
             print(text)
             text.remove(at: text.index(before: text.endIndex))
             print(text)

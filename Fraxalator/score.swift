@@ -18,7 +18,7 @@ class score: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         textView.text = fractalEngine.output
         textView.isEditable = false
-        print(fractalEngine.output)
+        print(fractalEngine.output ?? "")
     }
     
     override func didReceiveMemoryWarning() {

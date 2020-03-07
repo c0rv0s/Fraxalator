@@ -35,9 +35,8 @@ class Engine {
         var comp = start
         while counter < 5 {
             var newComp = ""
-            let characters = Array(comp!.characters)
             
-            for character in characters {
+            for character in comp! {
                 switch character {
                     case "a": newComp += self.aRule!
                     case "b": newComp += self.bRule!

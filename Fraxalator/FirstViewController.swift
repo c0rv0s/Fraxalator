@@ -129,8 +129,8 @@ class FirstViewController: UITableViewController {
     @IBAction func generate(_ sender: AnyObject) {
         if start.text == "" {
             let alertController = UIAlertController(title: "Alert", message:
-                "Please enter a starting sequence", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                "Please enter a starting sequence", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
             
             self.present(alertController, animated: true, completion: nil)
         }
@@ -157,7 +157,7 @@ class FirstViewController: UITableViewController {
     
     @IBAction func playButton(_ sender: AnyObject) {
 
-        let notes = Array(fractalEngine.output!.characters)
+        let notes = Array(fractalEngine.output!)
 
             //inside your playButton
             let delayConstant = 0.35 //customize as needed
