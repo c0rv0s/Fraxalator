@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC7D0AD2413448D0014A9BB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7D0AC2413448D0014A9BB /* Home.swift */; };
+		0FC7D0AF241345200014A9BB /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7D0AE241345200014A9BB /* ItemRow.swift */; };
 		21D3569F1D448C3B00C65285 /* pickInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3569E1D448C3B00C65285 /* pickInstrument.swift */; };
 		21D356A11D448C8200C65285 /* FeedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D356A01D448C8200C65285 /* FeedLayout.swift */; };
 		21D356A31D448CAC00C65285 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D356A21D448CAC00C65285 /* TitleCell.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC7D0AC2413448D0014A9BB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0FC7D0AE241345200014A9BB /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		21D3569E1D448C3B00C65285 /* pickInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickInstrument.swift; sourceTree = "<group>"; };
 		21D356A01D448C8200C65285 /* FeedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedLayout.swift; sourceTree = "<group>"; };
 		21D356A21D448CAC00C65285 /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				430D007B1D0A216900B88997 /* sound files */,
 				430D006E1D0A079900B88997 /* Fraxalator.entitlements */,
 				430D00581D09F5F600B88997 /* AppDelegate.swift */,
+				0FC7D0AC2413448D0014A9BB /* Home.swift */,
+				0FC7D0AE241345200014A9BB /* ItemRow.swift */,
 				430D005A1D09F5F600B88997 /* FirstViewController.swift */,
 				430D00841D0A699700B88997 /* Engine.swift */,
 				430D005C1D09F5F600B88997 /* SecondViewController.swift */,
@@ -197,6 +203,7 @@
 			files = (
 				430D005D1D09F5F600B88997 /* SecondViewController.swift in Sources */,
 				21D356A31D448CAC00C65285 /* TitleCell.swift in Sources */,
+				0FC7D0AF241345200014A9BB /* ItemRow.swift in Sources */,
 				430D00851D0A699700B88997 /* Engine.swift in Sources */,
 				21FC37011D3D85570011B3FD /* navBarCustom.swift in Sources */,
 				430D00591D09F5F600B88997 /* AppDelegate.swift in Sources */,
@@ -205,6 +212,7 @@
 				21D3569F1D448C3B00C65285 /* pickInstrument.swift in Sources */,
 				21D356A11D448C8200C65285 /* FeedLayout.swift in Sources */,
 				4349121C1D15EAB70095E276 /* RoundedCornersView.swift in Sources */,
+				0FC7D0AD2413448D0014A9BB /* Home.swift in Sources */,
 				4349121E1D15ED2B0095E276 /* addLetters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

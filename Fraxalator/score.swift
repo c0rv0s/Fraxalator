@@ -10,15 +10,12 @@ import Foundation
 import UIKit
 
 class score: UIViewController {
-    var fractalEngine : Engine!
-    
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        textView.text = fractalEngine.output
+        textView.text = fractalScore
         textView.isEditable = false
-        print(fractalEngine.output ?? "")
     }
     
     override func didReceiveMemoryWarning() {

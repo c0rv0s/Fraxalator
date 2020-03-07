@@ -10,10 +10,6 @@ import UIKit
 import AVFoundation
 
 class FirstViewController: UITableViewController {
-    
-    //store instance
-    var fractalEngine : Engine!
-    
     //store working letter
     var currentLetter : String!
     
@@ -135,16 +131,15 @@ class FirstViewController: UITableViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         else {
-            fractalEngine = Engine()
-            fractalEngine.aRule = A.text
-            fractalEngine.bRule = B.text
-            fractalEngine.cRule = C.text
-            fractalEngine.dRule = D.text
-            fractalEngine.eRule = E.text
-            fractalEngine.fRule = F.text
-            fractalEngine.gRule = G.text
-            fractalEngine.start = start.text
-            fractalEngine.generate()
+            aRule = A.text
+            bRule = B.text
+            cRule = C.text
+            dRule = D.text
+            eRule = E.text
+            fRule = F.text
+            gRule = G.text
+            startString = start.text
+            generateScore()
             playbutton.isHidden = false
             scoreButton.isEnabled = true
         }
@@ -156,53 +151,15 @@ class FirstViewController: UITableViewController {
     }
     
     @IBAction func playButton(_ sender: AnyObject) {
-
-        let notes = Array(fractalEngine.output!)
-
-            //inside your playButton
-            let delayConstant = 0.35 //customize as needed
-            
-            for (noteNumber, note) in notes.enumerated() {
-                delay(delayConstant * Double(noteNumber)) {
-                    //var note = notes[counter]
-                    if note == "a" {
-                        self.play(58)
-                        self.delay(delayConstant) {self.stop(58)}
-                        print("play")
-                    }
-                    else if note == "b" {
-                        self.play(59)
-                        self.delay(delayConstant) {self.stop(59)}
-                        print("play")
-                    }
-                    else if note == "c" {
-                        self.play(60)
-                        self.delay(delayConstant) {self.stop(60)}
-                        print("play")
-                    }
-                    else if note == "d" {
-                        self.play(61)
-                        self.delay(delayConstant) {self.stop(61)}
-                        print("play")
-                    }
-                    else if note == "e" {
-                        self.play(62)
-                        self.delay(delayConstant) {self.stop(62)}
-                        print("play")
-                    }
-                    else if note == "f" {
-                        self.play(63)
-                        self.delay(delayConstant) {self.stop(63)}
-                        print("play")
-                    }
-                    else {
-                        self.play(64)
-                        self.delay(delayConstant) {self.stop(64)}
-                        print("play")
-                    }
-
-                }
+        //inside your playButton
+        let delayConstant = 0.2
+        for (noteNumber, note) in fractalScore.enumerated() {
+            delay(delayConstant * Double(noteNumber)) {
+                let n = UInt8(58 + letters.firstIndex(of: String(note))!)
+                self.play(n)
+                self.delay(delayConstant) {self.stop(n)}
             }
+        }
     }
     
     func play(_ note: UInt8) {
@@ -289,7 +246,6 @@ class FirstViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue?, sender: Any?) {
         if (segue!.identifier == "scoreSegue") {
             let viewController:score = segue!.destination as! score
-            viewController.fractalEngine = self.fractalEngine!
         }
         if (segue!.identifier == "addLettersSegue") {
             let viewController:addLetters = segue!.destination as! addLetters
