@@ -3,7 +3,7 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "Spotlight Icon - 40x40-1.png",
+      "filename" : "Spotlight Icon - 40x40.png",
       "scale" : "2x"
     },
     {
@@ -27,7 +27,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Spotlight Icon - 80x80-1.png",
+      "filename" : "Spotlight Icon - 80x80.png",
       "scale" : "2x"
     },
     {
@@ -39,7 +39,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Spotlight Icon - 120x120.png",
+      "filename" : "App Icon - 120x120-1.png",
       "scale" : "2x"
     },
     {
@@ -51,13 +51,13 @@
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "App Icon - 20x20.png",
+      "filename" : "App Icon - 180x180-4.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "Spotlight Icon - 40x40-2.png",
+      "filename" : "Spotlight Icon - 40x40-1.png",
       "scale" : "2x"
     },
     {
@@ -69,37 +69,37 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Spotlight Icon - 58x58.png",
+      "filename" : "Settings Icon - 58x58-1.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Spotlight Icon - 40x40.png",
+      "filename" : "Spotlight Icon - 40x40-2.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Spotlight Icon - 80x80.png",
+      "filename" : "Spotlight Icon - 80x80-1.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "App Icon - 76x76.png",
+      "filename" : "App Icon - 180x180-3.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "App Icon - 152x152.png",
+      "filename" : "App Icon - 180x180-2.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "App Icon - 167x167.png",
+      "filename" : "App Icon - 180x180-1.png",
       "scale" : "2x"
     },
     {
