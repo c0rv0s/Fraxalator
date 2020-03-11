@@ -10,6 +10,7 @@
 		0F7FED0C241840D200C3BABB /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED0B241840D200C3BABB /* SetRule.swift */; };
 		0F7FED0F241849C600C3BABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED0E241849C500C3BABB /* SceneDelegate.swift */; };
 		0F7FED14241863AA00C3BABB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED13241863AA00C3BABB /* Score.swift */; };
+		0F7FED1624186BB400C3BABB /* SetSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED1524186BB400C3BABB /* SetSeed.swift */; };
 		0FC7D0AD2413448D0014A9BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7D0AC2413448D0014A9BB /* MainView.swift */; };
 		0FC7D0AF241345200014A9BB /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7D0AE241345200014A9BB /* ItemRow.swift */; };
 		430D00591D09F5F600B88997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D00581D09F5F600B88997 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		0F7FED0B241840D200C3BABB /* SetRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRule.swift; sourceTree = "<group>"; };
 		0F7FED0E241849C500C3BABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0F7FED13241863AA00C3BABB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		0F7FED1524186BB400C3BABB /* SetSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSeed.swift; sourceTree = "<group>"; };
 		0FC7D0AC2413448D0014A9BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0FC7D0AE241345200014A9BB /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		430D00551D09F5F600B88997 /* Fraxalator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fraxalator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,7 @@
 			children = (
 				0FC7D0AC2413448D0014A9BB /* MainView.swift */,
 				0F7FED0B241840D200C3BABB /* SetRule.swift */,
+				0F7FED1524186BB400C3BABB /* SetSeed.swift */,
 				0FC7D0AE241345200014A9BB /* ItemRow.swift */,
 			);
 			name = Views;
@@ -200,6 +203,7 @@
 				0FC7D0AF241345200014A9BB /* ItemRow.swift in Sources */,
 				430D00851D0A699700B88997 /* Engine.swift in Sources */,
 				0F7FED0F241849C600C3BABB /* SceneDelegate.swift in Sources */,
+				0F7FED1624186BB400C3BABB /* SetSeed.swift in Sources */,
 				430D00591D09F5F600B88997 /* AppDelegate.swift in Sources */,
 				0FC7D0AD2413448D0014A9BB /* MainView.swift in Sources */,
 			);

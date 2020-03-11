@@ -1,5 +1,5 @@
 //
-//  SetRule.swift
+//  SetSeed.swift
 //  Fraxalator
 //
 //  Created by Nathanael Mueller on 3/10/20.
@@ -8,14 +8,13 @@
 
 import SwiftUI
 
-struct SetRule: View {
-    var letter: String
+struct SetSeed: View {
     @Binding var score: Score
     
     var body: some View {
             VStack {
-                if (score.rules[self.letter] == "") {
-                    Text("Replace \(letter) with:")
+                if (self.score.seed == "") {
+                    Text("Replace seed with:")
                         .font(.title)
 //                        .font(.system(.title, design: .serif))
                         .frame(maxWidth: .infinity)
@@ -23,7 +22,7 @@ struct SetRule: View {
                         .padding(.vertical, 50)
                 }
                 else {
-                    Text(score.rules[self.letter] ?? "")
+                    Text(self.score.seed)
                         .font(.title)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 50)
@@ -33,7 +32,7 @@ struct SetRule: View {
                         ForEach(0 ..< 2) { col in
                             if (row == 3 && col == 1) {
                                 Button(action: {
-                                    self.score.rules[self.letter]! = String(self.score.rules[self.letter]!.dropLast())
+                                    self.score.seed = String(self.score.seed.dropLast())
                                 }) {
                                     Image(systemName: "delete.left")
                                         .padding()
@@ -47,7 +46,7 @@ struct SetRule: View {
                                 .padding(.horizontal, 15)
                             }
                             else {
-                                LetterButton(row: row, col: col, letter: self.letter, score: self.$score)
+                                SeedLetterButton(row: row, col: col, score: self.$score)
                             }
                         }
                     }
@@ -59,15 +58,14 @@ struct SetRule: View {
     
 }
 
-struct LetterButton: View {
+struct SeedLetterButton: View {
     var row: Int
     var col: Int
-    var letter: String
     @Binding var score: Score
     
     var body: some View {
         Button(action: {
-            self.score.rules[self.letter]! += self.score.letters[2 * self.row + self.col]
+            self.score.seed += self.score.letters[2 * self.row + self.col]
         }) {
             Text(self.score.letters[2 * self.row + self.col])
                 .padding()
@@ -81,8 +79,8 @@ struct LetterButton: View {
     }
 }
 
-//struct SetRule_Previews: PreviewProvider {
+//struct SetSeed_Previews: PreviewProvider {
 //    static var previews: some View {
-//        SetRule(letter: "A", score: )
+//        SetSeed()
 //    }
 //}

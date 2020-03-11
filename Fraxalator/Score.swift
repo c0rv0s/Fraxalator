@@ -9,12 +9,14 @@
 import Foundation
 
 struct Score {
-    let letters = ["A", "B", "C", "D", "E", "F", "G"]
-    var startString : String!
-    var fractalScore : String!
+    var letters: [String]
+    var startString: String!
+    var fractalScore: String!
     var rules: [String:String]
+    var seed = ""
     
     init() {
+        self.letters = (65...71).map({String(UnicodeScalar($0))})
         self.rules = letters.reduce(into: [:]) { dict, letter in
             dict[letter, default: ""] = ""
         }
@@ -22,11 +24,11 @@ struct Score {
     
     //create the score
     mutating func generateScore() {
-        var comp = startString
+        var comp = seed
         for _ in 0...5 {
             var newComp = ""
-            for character in comp! {
-                newComp += rules[String(character)] ?? ""
+            for char in comp {
+                newComp += rules[String(char)] ?? ""
             }
             comp = newComp
         }

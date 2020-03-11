@@ -15,28 +15,55 @@ struct ItemRow: View {
     
     var body: some View {
         HStack{
-            Text(letter + ": ")
-            
-            if (score.rules[self.letter] == "") {
-                Text("Tap to enter a rule")
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(Color.gray)
-                    .onTapGesture {
-                        self.pickRule.toggle()
-                    }
-                    .sheet(isPresented: $pickRule) {
-                        SetRule(letter: self.letter, score: self.$score)
-                    }
+            if (letter == "S") {
+                Image(systemName: "music.note")
+                Text(":")
+                if (score.seed == "") {
+                    Text("Tap to enter seed")
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color.gray)
+                        .onTapGesture {
+                            self.pickRule.toggle()
+                        }
+                        .sheet(isPresented: $pickRule) {
+                            SetSeed(score: self.$score)
+                        }
+                }
+                else {
+                    Text(self.score.seed)
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            self.pickRule.toggle()
+                        }
+                        .sheet(isPresented: $pickRule) {
+                            SetSeed(score: self.$score)
+                        }
+                }
             }
             else {
-                Text(self.score.rules[self.letter] ?? "")
-                    .frame(maxWidth: .infinity)
-                    .onTapGesture {
-                        self.pickRule.toggle()
-                    }
-                    .sheet(isPresented: $pickRule) {
-                        SetRule(letter: self.letter, score: self.$score)
-                    }
+                Text(letter + ": ")
+                
+                if (score.rules[self.letter] == "") {
+                    Text("Tap to enter a rule")
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color.gray)
+                        .onTapGesture {
+                            self.pickRule.toggle()
+                        }
+                        .sheet(isPresented: $pickRule) {
+                            SetRule(letter: self.letter, score: self.$score)
+                        }
+                }
+                else {
+                    Text(self.score.rules[self.letter] ?? "")
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            self.pickRule.toggle()
+                        }
+                        .sheet(isPresented: $pickRule) {
+                            SetRule(letter: self.letter, score: self.$score)
+                        }
+                }
             }
         }
     }

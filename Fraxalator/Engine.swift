@@ -38,13 +38,24 @@ let gmMarimba = UInt8(12)
 let gmHarpsichord = UInt8(6)
 
 //audio engine type stuff
+func playScore(score: Score) {
+    //inside your playButton
+    let delayConstant = 0.2
+    for (noteNumber, note) in score.fractalScore.enumerated() {
+        delay(delayConstant * Double(noteNumber)) {
+            let n = UInt8(58 + score.letters.firstIndex(of: String(note))!)
+            play(n)
+            delay(delayConstant) {stop(n)}
+        }
+    }
+}
+
 func play(_ note: UInt8) {
     sampler.startNote(note, withVelocity: 64, onChannel: 0)
 }
 
 func stop(_ note: UInt8) {
     sampler.stopNote(note, onChannel: 0)
-
 }
 
 //global delay helper function
