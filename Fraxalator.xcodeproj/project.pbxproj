@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F7FED0C241840D200C3BABB /* SetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED0B241840D200C3BABB /* SetRule.swift */; };
 		0F7FED0F241849C600C3BABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED0E241849C500C3BABB /* SceneDelegate.swift */; };
-		0F7FED1124184BA100C3BABB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED1024184BA100C3BABB /* Score.swift */; };
+		0F7FED14241863AA00C3BABB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7FED13241863AA00C3BABB /* Score.swift */; };
 		0FC7D0AD2413448D0014A9BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7D0AC2413448D0014A9BB /* MainView.swift */; };
 		0FC7D0AF241345200014A9BB /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7D0AE241345200014A9BB /* ItemRow.swift */; };
 		430D00591D09F5F600B88997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430D00581D09F5F600B88997 /* AppDelegate.swift */; };
@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		0F7FED0B241840D200C3BABB /* SetRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRule.swift; sourceTree = "<group>"; };
 		0F7FED0E241849C500C3BABB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F7FED1024184BA100C3BABB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		0F7FED13241863AA00C3BABB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		0FC7D0AC2413448D0014A9BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0FC7D0AE241345200014A9BB /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		430D00551D09F5F600B88997 /* Fraxalator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fraxalator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +68,7 @@
 		0F7FED12241854BA00C3BABB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0F7FED1024184BA100C3BABB /* Score.swift */,
+				0F7FED13241863AA00C3BABB /* Score.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F7FED1124184BA100C3BABB /* Score.swift in Sources */,
+				0F7FED14241863AA00C3BABB /* Score.swift in Sources */,
 				0F7FED0C241840D200C3BABB /* SetRule.swift in Sources */,
 				0FC7D0AF241345200014A9BB /* ItemRow.swift in Sources */,
 				430D00851D0A699700B88997 /* Engine.swift in Sources */,
