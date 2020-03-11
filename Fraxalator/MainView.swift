@@ -23,7 +23,7 @@ struct MainView: View {
                 Button(action: {
                     self.score.generateScore()
                     self.showingAlert.toggle()
-//                    playScore(score: self.score)
+                    self.score.playScore()
                 }) {
                     Text("Create")
                         .frame(maxWidth: .infinity)
