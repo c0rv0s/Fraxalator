@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     @State var score = Score()
-    @State private var showingAlert = false
+    @State var showingScore = false
     
     var body: some View {
         NavigationView {
@@ -22,15 +22,16 @@ struct MainView: View {
                 ItemRow(letter: "S", score: self.$score)
                 Button(action: {
                     self.score.generateScore()
-                    self.showingAlert.toggle()
+                    self.showingScore.toggle()
                     self.score.playScore()
                 }) {
                     Text("Create")
                         .frame(maxWidth: .infinity)
                         .foregroundColor(Color.blue)
                 }
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text("Score"), message: Text(self.score.fractalScore), dismissButton: .default(Text("Done")))
+                .sheet(isPresented: $showingScore) {
+                    Text(self.score.fractalScore)
+                        .padding()
                 }
             }
             .navigationBarTitle(Text("Fractal Rules"))
