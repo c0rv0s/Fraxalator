@@ -1,28 +1,36 @@
 //
-//  score.swift
+//  Score.swift
 //  Fraxalator
 //
-//  Created by Nathan Mueller on 6/11/16.
-//  Copyright © 2016 OneNathan. All rights reserved.
+//  Created by Nathanael Mueller on 3/10/20.
+//  Copyright © 2020 OneNathan. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
-class score: UIViewController {
-    @IBOutlet weak var textView: UITextView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        textView.text = fractalScore
-        textView.isEditable = false
+struct Score {
+    let letters = ["A", "B", "C", "D", "E", "F", "G"]
+    var startString : String!
+    var fractalScore : String!
+    var rules: [String:String]
+    
+    init() {
+        self.rules = letters.reduce(into: [:]) { dict, letter in
+            dict[letter, default: ""] = ""
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //create the score
+    mutating func generateScore() {
+        var comp = startString
+        for _ in 0...5 {
+            var newComp = ""
+            for character in comp! {
+                newComp += rules[String(character)] ?? ""
+            }
+            comp = newComp
+        }
+        fractalScore = comp
     }
-    
     
 }
-
