@@ -15,17 +15,18 @@ struct Score {
     var fractalScore: String!
     var rules: [String:String]
     var seed = ""
+    var iterations = 5
     
     init() {
         self.letters = (65...71).map({String(UnicodeScalar($0))})
         self.rules = letters.reduce(into: [:]) { dict, letter in
-            dict[letter, default: ""] = ""
+            dict[letter, default: letter] = letter
         }
     }
     
     mutating func generateScore() {
         var comp = seed
-        for _ in 0...5 {
+        for _ in 0...iterations {
             var newComp = ""
             for char in comp {
                 newComp += rules[String(char)] ?? ""

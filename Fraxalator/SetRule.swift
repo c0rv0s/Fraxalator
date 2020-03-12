@@ -17,7 +17,6 @@ struct SetRule: View {
                 if (score.rules[self.letter] == "") {
                     Text("Replace \(letter) with:")
                         .font(.title)
-//                        .font(.system(.title, design: .serif))
                         .frame(maxWidth: .infinity)
                         .foregroundColor(Color.gray)
                         .padding(.vertical, 50)

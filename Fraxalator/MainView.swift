@@ -20,6 +20,10 @@ struct MainView: View {
                         ItemRow(letter: self.score.letters[$0], score: self.$score)
                     }
                     ItemRow(letter: "S", score: self.$score)
+                    Stepper(value: $score.iterations) {
+                        Text("Iterations: ").fontWeight(.heavy)
+                        Text("\(self.score.iterations)")
+                    }
                 }
                 
                 Section {

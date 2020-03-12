@@ -14,56 +14,36 @@ struct ItemRow: View {
     @Binding var score: Score
     
     var body: some View {
-        HStack{
+        HStack {
             if (letter == "S") {
                 Image(systemName: "music.note")
                 Text(":")
+                Spacer()
                 if (score.seed == "") {
                     Text("Tap to enter seed")
-                        .frame(maxWidth: .infinity)
                         .foregroundColor(Color.gray)
-                        .onTapGesture {
-                            self.pickRule.toggle()
-                        }
-                        .sheet(isPresented: $pickRule) {
-                            SetSeed(score: self.$score)
-                        }
                 }
                 else {
                     Text(self.score.seed)
-                        .frame(maxWidth: .infinity)
-                        .onTapGesture {
-                            self.pickRule.toggle()
-                        }
-                        .sheet(isPresented: $pickRule) {
-                            SetSeed(score: self.$score)
-                        }
                 }
             }
             else {
-                Text(letter + ": ")
-                
-                if (score.rules[self.letter] == "") {
-                    Text("Tap to enter a rule")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(Color.gray)
-                        .onTapGesture {
-                            self.pickRule.toggle()
-                        }
-                        .sheet(isPresented: $pickRule) {
-                            SetRule(letter: self.letter, score: self.$score)
-                        }
-                }
-                else {
-                    Text(self.score.rules[self.letter] ?? "")
-                        .frame(maxWidth: .infinity)
-                        .onTapGesture {
-                            self.pickRule.toggle()
-                        }
-                        .sheet(isPresented: $pickRule) {
-                            SetRule(letter: self.letter, score: self.$score)
-                        }
-                }
+                Text(letter + ": ").fontWeight(.heavy)
+                Spacer()
+                Text(self.score.rules[self.letter] ?? "")
+            }
+            Image(systemName: "pencil").foregroundColor(Color(UIColor.brown))
+            Spacer()
+        }
+        .onTapGesture {
+            self.pickRule.toggle()
+        }
+        .sheet(isPresented: $pickRule) {
+            if (self.letter == "S") {
+                SetSeed(score: self.$score)
+            }
+            else {
+                SetRule(letter: self.letter, score: self.$score)
             }
         }
     }

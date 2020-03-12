@@ -14,9 +14,8 @@ struct SetSeed: View {
     var body: some View {
             VStack {
                 if (self.score.seed == "") {
-                    Text("Replace seed with:")
+                    Text("Enter a seed:")
                         .font(.title)
-//                        .font(.system(.title, design: .serif))
                         .frame(maxWidth: .infinity)
                         .foregroundColor(Color.gray)
                         .padding(.vertical, 50)
