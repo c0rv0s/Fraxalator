@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Fraxalator.xcodeproj">
+      location = "self:/Users/nathanaelmueller/Documents/Development/Fraxalator/Fractlator.xcodeproj">
    </FileRef>
 </Workspace>
