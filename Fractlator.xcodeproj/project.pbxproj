@@ -32,7 +32,7 @@
 		430D00611D09F5F600B88997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430D00641D09F5F600B88997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430D00661D09F5F600B88997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		430D006E1D0A079900B88997 /* Fraxalator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Fraxalator.entitlements; sourceTree = "<group>"; };
+		430D006E1D0A079900B88997 /* Fractalator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fractalator.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		430D00571D09F5F600B88997 /* Fractalator */ = {
 			isa = PBXGroup;
 			children = (
-				430D006E1D0A079900B88997 /* Fraxalator.entitlements */,
+				430D006E1D0A079900B88997 /* Fractalator.entitlements */,
 				430D00581D09F5F600B88997 /* AppDelegate.swift */,
 				0F7FED0E241849C500C3BABB /* SceneDelegate.swift */,
 				0F7FED0D241840D900C3BABB /* Views */,
@@ -311,10 +311,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
-				INFOPLIST_FILE = Fraxalator/Info.plist;
+				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.onenathan.Fractalator;
 				PRODUCT_NAME = Fractalator;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -326,10 +328,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
-				INFOPLIST_FILE = Fraxalator/Info.plist;
+				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.onenathan.Fractalator;
 				PRODUCT_NAME = Fractalator;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
