@@ -36,7 +36,7 @@ struct MainView: View {
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color.blue)
                     }
-                    .sheet(isPresented: $showingScore) {
+                    .sheet(isPresented: $showingScore, onDismiss: { self.score.pauseScore() }) {
                         VStack {
                             Text(self.score.fractalScore)
                                 .padding()
