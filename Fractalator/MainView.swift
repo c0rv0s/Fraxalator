@@ -37,8 +37,26 @@ struct MainView: View {
                             .foregroundColor(Color.blue)
                     }
                     .sheet(isPresented: $showingScore) {
-                        Text(self.score.fractalScore)
-                            .padding()
+                        VStack {
+                            Text(self.score.fractalScore)
+                                .padding()
+                            
+                            Button(action: {
+                                if self.score.playing {
+                                    self.score.pauseScore()
+                                }
+                                else {
+                                    self.score.playScore()
+                                }
+                            }) {
+                                if self.score.playing {
+                                    Image(systemName: "pause")
+                                }
+                                else {
+                                    Image(systemName: "play")
+                                }
+                            }
+                        }
                     }
                 }
             }

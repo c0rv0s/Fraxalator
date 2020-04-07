@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		430D00541D09F5F600B88997 /* Fractlator */ = {
+		430D00541D09F5F600B88997 /* Fractalator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 430D00691D09F5F600B88997 /* Build configuration list for PBXNativeTarget "Fractlator" */;
+			buildConfigurationList = 430D00691D09F5F600B88997 /* Build configuration list for PBXNativeTarget "Fractalator" */;
 			buildPhases = (
 				430D00511D09F5F600B88997 /* Sources */,
 				430D00521D09F5F600B88997 /* Frameworks */,
@@ -112,7 +112,7 @@
 			);
 			dependencies = (
 			);
-			name = Fractlator;
+			name = Fractalator;
 			productName = Fraxalator;
 			productReference = 430D00551D09F5F600B88997 /* Fractalator.app */;
 			productType = "com.apple.product-type.application";
@@ -139,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 430D00501D09F5F600B88997 /* Build configuration list for PBXProject "Fractlator" */;
+			buildConfigurationList = 430D00501D09F5F600B88997 /* Build configuration list for PBXProject "Fractalator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -152,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				430D00541D09F5F600B88997 /* Fractlator */,
+				430D00541D09F5F600B88997 /* Fractalator */,
 			);
 		};
 /* End PBXProject section */
@@ -311,7 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
 				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -328,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
 				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -344,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		430D00501D09F5F600B88997 /* Build configuration list for PBXProject "Fractlator" */ = {
+		430D00501D09F5F600B88997 /* Build configuration list for PBXProject "Fractalator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				430D00671D09F5F600B88997 /* Debug */,
@@ -353,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		430D00691D09F5F600B88997 /* Build configuration list for PBXNativeTarget "Fractlator" */ = {
+		430D00691D09F5F600B88997 /* Build configuration list for PBXNativeTarget "Fractalator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				430D006A1D09F5F600B88997 /* Debug */,
