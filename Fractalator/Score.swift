@@ -58,7 +58,7 @@ struct Score {
                                            releaseVelocity: 0,
                                            duration: 0.5 )
                 musicTrack = MusicTrackNewMIDINoteEvent(track!, time, &note)
-                time += 1
+                time += 0.5
             }
             var player = NewMusicPlayer(&musicPlayer)
             MusicPlayerSetSequence(musicPlayer!, sequence)

@@ -38,8 +38,10 @@ struct MainView: View {
                     }
                     .sheet(isPresented: $showingScore, onDismiss: { self.score.pauseScore() }) {
                         VStack {
-                            Text(self.score.fractalScore)
+                            ScrollView {
+                                Text(self.score.fractalScore)
                                 .padding()
+                            }
                             
                             Button(action: {
                                 if self.score.playing {
@@ -51,11 +53,16 @@ struct MainView: View {
                             }) {
                                 if self.score.playing {
                                     Image(systemName: "pause")
+                                    .frame(height: 35)
+                                    .font(.system(size: 28))
                                 }
                                 else {
                                     Image(systemName: "play")
+                                    .frame(height: 35)
+                                    .font(.system(size: 28))
                                 }
                             }
+                            .padding()
                         }
                     }
                 }
