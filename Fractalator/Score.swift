@@ -45,10 +45,10 @@ struct Score {
         playing = true
         if timestamp == 0 {
             var sequence : MusicSequence? = nil
-            var musicSequence = NewMusicSequence(&sequence)
+            _ = NewMusicSequence(&sequence)
 
             var track : MusicTrack? = nil
-            var musicTrack = MusicSequenceNewTrack(sequence!, &track)
+            MusicSequenceNewTrack(sequence!, &track)
             var time = MusicTimeStamp(1.0)
             
             for noteLetter in self.fractalScore {
@@ -57,10 +57,10 @@ struct Score {
                                            velocity: 64,
                                            releaseVelocity: 0,
                                            duration: 0.5 )
-                musicTrack = MusicTrackNewMIDINoteEvent(track!, time, &note)
+                MusicTrackNewMIDINoteEvent(track!, time, &note)
                 time += 0.5
             }
-            var player = NewMusicPlayer(&musicPlayer)
+            NewMusicPlayer(&musicPlayer)
             MusicPlayerSetSequence(musicPlayer!, sequence)
             MusicPlayerStart(musicPlayer!)
         }
