@@ -17,6 +17,7 @@ struct Score {
     var seed = ""
     var iterations = 5
     var playing = false
+    var paused = false
     var timestamp: MusicTimeStamp = 0
     var totalTime = 0.0
     
@@ -44,8 +45,7 @@ struct Score {
     }
     
     mutating func playScore() {
-        playing = true
-        if timestamp == 0 {
+        if timestamp == 0 || timestamp > totalTime {
             var sequence : MusicSequence? = nil
             NewMusicSequence(&sequence)
 
@@ -71,17 +71,23 @@ struct Score {
             MusicPlayerSetTime(musicPlayer!, timestamp)
             MusicPlayerStart(musicPlayer!)
         }
+        playing = true
+        paused = false
     }
     
     mutating func pauseScore() {
         playing = false
+        paused = true
         MusicPlayerGetTime(musicPlayer!, &timestamp)
         MusicPlayerStop(musicPlayer!)
     }
     
     mutating func isPlaying() {
         MusicPlayerGetTime(musicPlayer!, &timestamp)
-        playing = timestamp < totalTime
+        if timestamp > totalTime {
+            paused = false
+        }
+        playing = timestamp < totalTime && !paused
     }
     
 }
