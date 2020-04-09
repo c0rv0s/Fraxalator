@@ -32,10 +32,18 @@ struct MainView: View {
                         self.showingScore.toggle()
                         self.score.playScore()
                     }) {
-                        Text("Create")
+                        if self.score.seed == "" {
+                            Text("Create")
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(Color.gray)
+                        }
+                        else {
+                            Text("Create")
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(Color.blue)
+                        }
                     }
+                    .disabled(self.score.seed == "")
                     .sheet(isPresented: $showingScore, onDismiss: { self.score.pauseScore() }) {
                         VStack {
                             ScrollView {
