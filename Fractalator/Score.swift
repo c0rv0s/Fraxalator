@@ -18,6 +18,7 @@ struct Score {
     var iterations = 5
     var playing = false
     var timestamp: MusicTimeStamp = 0
+    var totalTime = 0.0
     
     var musicPlayer : MusicPlayer? = nil
     
@@ -26,6 +27,7 @@ struct Score {
         self.rules = letters.reduce(into: [:]) { dict, letter in
             dict[letter, default: letter] = letter
         }
+        NewMusicPlayer(&musicPlayer)
     }
     
     mutating func generateScore() {
@@ -60,6 +62,7 @@ struct Score {
                 MusicTrackNewMIDINoteEvent(track!, time, &note)
                 time += 0.5
             }
+            totalTime = time
             NewMusicPlayer(&musicPlayer)
             MusicPlayerSetSequence(musicPlayer!, sequence)
             MusicPlayerStart(musicPlayer!)
@@ -74,6 +77,11 @@ struct Score {
         playing = false
         MusicPlayerGetTime(musicPlayer!, &timestamp)
         MusicPlayerStop(musicPlayer!)
+    }
+    
+    mutating func isPlaying() {
+        MusicPlayerGetTime(musicPlayer!, &timestamp)
+        playing = timestamp < totalTime
     }
     
 }

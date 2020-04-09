@@ -11,6 +11,7 @@ import SwiftUI
 struct MainView: View {
     @State var score = Score()
     @State var showingScore = false
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationView {
@@ -77,6 +78,9 @@ struct MainView: View {
             }
             .navigationBarTitle(Text("Fractal Rules"))
             .listStyle(GroupedListStyle())
+            .onReceive(timer) { input in
+                self.score.isPlaying()
+            }
         }
     }
 }
