@@ -311,7 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
 				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -328,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
 				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
