@@ -45,7 +45,7 @@ struct Score {
         playing = true
         if timestamp == 0 {
             var sequence : MusicSequence? = nil
-            _ = NewMusicSequence(&sequence)
+            NewMusicSequence(&sequence)
 
             var track : MusicTrack? = nil
             MusicSequenceNewTrack(sequence!, &track)
