@@ -311,7 +311,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_ENTITLEMENTS = Fractalator/Fractalator.entitlements;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
 				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -319,6 +320,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.onenathan.Fractalator;
 				PRODUCT_NAME = Fractalator;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -328,7 +330,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 4;
+				CODE_SIGN_ENTITLEMENTS = Fractalator/Fractalator.entitlements;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = PLNFCVNGS6;
 				INFOPLIST_FILE = Fractalator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -336,6 +339,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.onenathan.Fractalator;
 				PRODUCT_NAME = Fractalator;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
